@@ -1,6 +1,7 @@
 name: Release
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - '*'
@@ -9,7 +10,7 @@ jobs:
 
   linux:
     name: Build Linux native binaries
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     environment: publish
     permissions:
       contents: write
@@ -79,7 +80,7 @@ jobs:
 
   macos:
     name: Build MacOS native binaries
-    runs-on: macos-latest
+    runs-on: macos-15
     environment: publish
     permissions:
       contents: write
@@ -102,7 +103,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.8'
+          python-version: '3.10'
       - name: Build native lib
         run: ./gradlew buildNativeProject
         env:
@@ -160,9 +161,7 @@ jobs:
           artifacts: >-
             physx-jni/build/libs/*.jar,
             physx-jni-natives-linux/build/libs/physx-jni-natives-linux-?.?.?.jar,
-            physx-jni-natives-linux-cuda/build/libs/physx-jni-natives-linux-cuda-?.?.?.jar,
             physx-jni-natives-windows/build/libs/physx-jni-natives-windows-?.?.?.jar,
-            physx-jni-natives-windows-cuda/build/libs/physx-jni-natives-windows-cuda-?.?.?.jar,
             physx-jni-natives-macos/build/libs/physx-jni-natives-macos-?.?.?.jar,
             physx-jni-natives-macos-arm64/build/libs/physx-jni-natives-macos-arm64-?.?.?.jar,
             physx-jni-android/build/outputs/aar/physx-jni-android-release.aar
