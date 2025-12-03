@@ -18,7 +18,7 @@ on:
 jobs:
   build_linux:
     name: Linux build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v4
@@ -89,7 +89,7 @@ jobs:
 
   build_macos:
     name: MacOS build
-    runs-on: macos-15
+    runs-on: macos-14
 
     steps:
       - name: Checkout project
