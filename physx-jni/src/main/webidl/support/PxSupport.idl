@@ -324,17 +324,6 @@ interface Vector_PxVec4 {
 };
 
 [Deprecated]
-interface Vector_PxActorPtr {
-    void Vector_PxActorPtr();
-    void Vector_PxActorPtr(unsigned long size);
-    PxActor at(unsigned long index);
-    PxActorPtr data();
-    unsigned long size();
-    void push_back(PxActor value);
-    void clear();
-};
-
-[Deprecated]
 interface Vector_PxContactPairPoint {
     void Vector_PxContactPairPoint();
     void Vector_PxContactPairPoint(unsigned long size);
