@@ -20,6 +20,7 @@ interface PxScene {
     // Contained Object Retrieval
     unsigned long getNbActors([Ref] PxActorTypeFlags types);
     // unsigned long getActors(...)
+    unsigned long getActors([Ref] PxActorTypeFlags types, PxActorPtr userBuffer, unsigned long bufferSize, unsigned long startIndex);
     // PxActorPtr getActiveActors();    -> SupportFunctions.PxScene_getActiveActors();
     //[Platforms="windows;linux", Value] unsigned long getNbSoftBodies();
     // unsigned long getSoftBodies(...);
