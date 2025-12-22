@@ -22,6 +22,7 @@ interface PxScene {
     // unsigned long getActors(...)
     unsigned long getActors([Ref] PxActorTypeFlags types, PxActorPtr userBuffer, unsigned long bufferSize, unsigned long startIndex);
     // PxActorPtr getActiveActors();    -> SupportFunctions.PxScene_getActiveActors();
+    unsigned long getConstraints(PxConstraintPtr userBuffer, unsigned long bufferSize, unsigned long startIndex);
     [Platforms="windows;linux", Value] unsigned long getNbSoftBodies();
     // unsigned long getSoftBodies(...);
     [Platforms="windows;linux", Value] unsigned long getNbParticleSystems(PxParticleSolverTypeEnum type);
