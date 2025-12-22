@@ -44,6 +44,8 @@ interface PxVehicleWheelsPtr { };
 
 interface PxShapePtr { };
 
+interface PxConstraintPtr { };
+
 interface NativeArrayHelpers {
     static octet getU8At([Ref] PxU8ConstPtr base, long index);
     static unsigned short getU16At([Ref] PxU16ConstPtr base, long index);
@@ -184,6 +186,18 @@ interface PxArray_PxActorPtr {
     PxActorPtr begin();
     unsigned long size();
     void pushBack(PxActor value);
+    void clear();
+};
+
+[StackAllocatable]
+interface PxArray_PxConstraintPtr {
+    void PxArray_PxConstraintPtr();
+    void PxArray_PxConstraintPtr(unsigned long size);
+    PxConstraint get(unsigned long index);
+    void set(unsigned long index, [Const, Ref] PxConstraintPtr value);
+    PxConstraintPtr begin();
+    unsigned long size();
+    void pushBack(PxConstraint value);
     void clear();
 };
 
