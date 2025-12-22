@@ -80,7 +80,7 @@ interface PxConstraint {
     //void getBreakForce
     void setMinResponseThreshold(float threshold);
     float getMinResponseThreshold();
-    VoidPtr getExternalReference(PxU32Ptr typeID);
+    //VoidPtr getExternalReference([Ref] PxU32 typeID);
     //void setConstraintFunctions
 };
 PxConstraint implements PxBase;
