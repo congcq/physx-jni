@@ -7,7 +7,7 @@ interface SupportFunctions {
     [Ref] static PxArray_PxActorPtr PxScene_getActiveActors(PxScene scene);
     static unsigned long PxArticulationReducedCoordinate_getMinSolverPositionIterations(PxArticulationReducedCoordinate articulation);
     static unsigned long PxArticulationReducedCoordinate_getMinSolverVelocityIterations(PxArticulationReducedCoordinate articulation);
-    static VoidPtr PxConstraint_getExternalReference(PxConstraint constraint, PxU32Ptr typeID);
+    static VoidPtr PxConstraint_getExternalReference([Ref] PxConstraint constraint, [Ref] PxU32Ptr typeID);
 };
 
 interface PxU8Ptr { };
