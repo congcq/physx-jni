@@ -8,6 +8,8 @@ interface SupportFunctions {
     static unsigned long PxArticulationReducedCoordinate_getMinSolverPositionIterations(PxArticulationReducedCoordinate articulation);
     static unsigned long PxArticulationReducedCoordinate_getMinSolverVelocityIterations(PxArticulationReducedCoordinate articulation);
     static VoidPtr PxConstraint_getExternalReference([Ref] PxConstraint constraint, [Ref] PxU32Ptr typeID);
+    static PxRigidActor PxConstraint_getActor0([Ref] PxConstraint constraint);
+    static PxRigidActor PxConstraint_getActor1([Ref] PxConstraint constraint);
 };
 
 interface PxU8Ptr { };
