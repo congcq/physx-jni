@@ -1,3 +1,4 @@
 [submodule "PhysX"]
 	path = PhysX
-	url = https://github.com/haubna/PhysX.git
+	url = https://github.com/congcq/PhysX
+	branch = workflow-2.5.1
