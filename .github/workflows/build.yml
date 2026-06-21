@@ -87,7 +87,7 @@ jobs:
 
   build_macos:
     name: MacOS build
-    runs-on: macos-latest
+    runs-on: macos-14
 
     steps:
       - name: Checkout project
